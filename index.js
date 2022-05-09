@@ -27,7 +27,12 @@ pauseBtn.addEventListener("click", () => {
         paused = true;
         elapsedTime = Date.now() - startTime;
         clearInterval(intervalid);
+    } else {
+        paused = false;
+        startTime = Date.now() - elapsedTime;
+        intervalid = setInterval(updateTime, 1);
     }
+    pauseBtn.textContent = pauseBtn.textContent == "Pause" ? "Continue" : "Pause";
 });
 resetBtn.addEventListener("click", () => {
     paused = true;

@@ -1,4 +1,5 @@
 const timeDisplay = document.querySelector("#numbers");
+
 // const startBtn = document.querySelector("#start")
 const pauseBtn = document.querySelector("#pause");
 const resetBtn = document.querySelector("#reset");
